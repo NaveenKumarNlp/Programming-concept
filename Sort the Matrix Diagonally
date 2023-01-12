@@ -1,0 +1,29 @@
+public int[][] diagonalSort(int[][] mat) {
+        if(mat.length<=1 || mat[0].length<=1){
+            return mat;
+        }
+        for(int k=0;k<mat.length-1;k++){
+            for(int i=0;i<mat.length-1;i++){
+                for(int j=i+1;(j+k)<mat.length && j<mat[0].length;j++){
+                    if(mat[k+i][i]>mat[k+j][j]){
+                        int temp=mat[k+i][i];
+                        mat[k+i][i]=mat[k+j][j];
+                        mat[k+j][j]=temp;
+                    }
+                }
+            }
+            
+        }
+        for(int k=1;k<mat[0].length-1;k++){
+            for(int i=0;i<mat[0].length-1;i++){
+                for(int j=i+1;(j+k)<mat[0].length && j<mat.length;j++){ 
+                    if(mat[i][i+k]>mat[j][j+k]){
+                        int temp=mat[i][i+k];
+                        mat[i][i+k]=mat[j][j+k];
+                        mat[j][j+k]=temp;
+                    }
+                }
+            }
+        }
+        return mat;
+    }
