@@ -1,0 +1,11 @@
+//sorting based an occurrence 
+
+Collections.sort(list,(a,b)->{
+			int f1 = map.get(a);
+			int f2 = map.get(b);
+			if (f1 != f2) {
+				return f1 - f2;
+			} else {
+				return a - b;
+			}
+		});
