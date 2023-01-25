@@ -1,1 +1,8 @@
+
 Arrays.sort(cur, (a, b) -> (a[1] == b[1] ? a[0] - b[0] : a[1] - b[1]));
+
+
+public int[][] sortTheStudents(int[][] A, int k) {
+        Arrays.sort(A, (a, b) -> b[k] - a[k]);
+        return A;
+    }
