@@ -1,0 +1,3 @@
+for (int i = 0; i < arrray.length; ++i) {
+        max = Math.max(max,array[i]);
+    }
