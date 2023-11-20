@@ -1,6 +1,6 @@
 1). sum of an arithmetic progression:
         
-    S= n/2[2a+(n−1)d]   --->  calculate sum of the arithmetic progression.
+    S= n*[2a+(n−1)d]/2   --->  calculate sum of the arithmetic progression.
 
 Here's a breakdown of the formula:
 n is the number of terms.
