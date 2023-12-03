@@ -26,3 +26,5 @@ d is the common difference between terms.
 6).Formula for sum of n odd numbers: n^2
 
 7).Formula for sum of n even numbers: n(n+1)
+
+8).Formula to calculate the number of diagonals in an N-sided convex polygon : N * (N - 3) / 2;
