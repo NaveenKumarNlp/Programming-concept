@@ -28,3 +28,5 @@ d is the common difference between terms.
 7).Formula for sum of n even numbers: n(n+1)
 
 8).Formula to calculate the number of diagonals in an N-sided convex polygon : N * (N - 3) / 2;
+
+9).Simple Interest = (P × R × T)/100.
