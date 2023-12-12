@@ -30,3 +30,8 @@ d is the common difference between terms.
 8).Formula to calculate the number of diagonals in an N-sided convex polygon : N * (N - 3) / 2;
 
 9).Simple Interest = (P × R × T)/100.
+
+10).sum of a geometric progression: a*((r^n-1)/(r-1))
+          a is the first term,
+          r is the common ratio, and
+          n is the number of terms.
