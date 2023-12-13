@@ -35,3 +35,16 @@ d is the common difference between terms.
           a is the first term,
           r is the common ratio, and
           n is the number of terms.
+
+11).Left Shift (<<):
+          result = value * (2^numPositions)  --> This formula indicates that left-shifting value by numPositions is 
+                                                       equivalent to multiplying value by 2 raised to the power of numPositions.
+
+12).Signed Right Shift (>>):
+          result = value / (2^numPositions)  -->  The signed right shift is similar to dividing value by 2 raised to the power of numPositions. 
+                                                            The result is rounded down for integer types.
+
+13).Unsigned Right Shift (>>>):
+          result = (value / (2^numPositions)) mod (2^(bitLength - numPositions))  --> The unsigned right shift is similar to dividing value by 2 raised to the power of numPositions, 
+                                                                                          and then taking the remainder when divided by 2 raised to the power of the remaining bit positions.
+                                                                                               bitLength is the total number of bits in the data type.
