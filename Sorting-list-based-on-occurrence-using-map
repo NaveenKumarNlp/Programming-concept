@@ -1,0 +1,73 @@
+//sorting based an occurrence 
+
+package Program_Concept;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Sorting_list_based_on_occurrence_using_map {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER THE SIZE OF LIST");
+        int size=sc.nextInt();
+        ArrayList<Integer> list=new ArrayList<>(size);
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<size;i++){
+            int temp=sc.nextInt();
+            list.add(temp);
+            map.put(temp,map.getOrDefault(temp,0)+1);
+        
+
+        Collections.sort(list,(a,b)->{     //--> occ--min to max   // same occ -> value ->min to max
+			int f1 = map.get(a);
+			int f2 = map.get(b);
+			if (f1 != f2) {
+				return f1 - f2;
+			} else {
+				return a - b;
+			}
+		});
+
+        System.out.println(list);
+
+        Collections.sort(list,(a,b)->{   //--> occ--min to max   // same occ -> value ->max to min
+			int f1 = map.get(a);
+			int f2 = map.get(b);
+			if (f1 != f2) {
+				return f1 - f2;
+			} else {
+				return b - a;
+			}
+		});
+
+        System.out.println(list);
+
+        Collections.sort(list,(a,b)->{  //--> occ--max to min   // same occ -> value ->max to min
+			int f1 = map.get(a);
+			int f2 = map.get(b);
+			if (f1 != f2) {
+				return f2 - f1;
+			} else {
+				return b - a;
+			}
+		});
+
+        System.out.println(list);
+
+        Collections.sort(list,(a,b)->{    //--> occ--max to min   // same occ -> value ->min to max
+			int f1 = map.get(a);
+			int f2 = map.get(b);
+			if (f1 != f2) {
+				return f2 - f1;
+			} else {
+				return a - b;
+			}
+		});
+
+        System.out.println(list);
+        sc.close();
+    }
+}
+
