@@ -1,0 +1,57 @@
+class Solution {
+    public static boolean check(int []nums,int start,int end){
+        HashSet<Integer> set=new HashSet<>();
+        int min=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
+        for(int j=start;j<=end;j++){
+            set.add(nums[j]);
+            min=Math.min(min,nums[j]);
+            max=Math.max(max,nums[j]);
+        }
+        if((max-min)%(end-start)!=0){
+            return false;
+        }
+        int diff=(max-min)/(end-start);
+        while(min<max){
+            if(!set.contains(min)){
+                return false;
+            }
+            min+=diff;
+        }
+        return true;
+    }
+    public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
+        ArrayList<Boolean> list=new ArrayList<>();
+        for(int i=0;i<l.length;i++){
+            list.add(check(nums,l[i],r[i]));
+        }
+        return list;
+    }
+}
+
+
+class Solution {
+    public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
+        ArrayList<Boolean> list=new ArrayList<>();
+        for(int i=0;i<l.length;i++){
+            int diff=0,count=0;
+            int []arr=new int[r[i]-l[i]+1];
+            for(int j=l[i];j<=r[i];j++){
+                arr[count++]=nums[j];
+            }
+            Arrays.sort(arr);
+            for(int k=1;k<arr.length;k++){
+                if(k==1 || Math.abs(arr[k]-arr[k-1])==diff){
+                    diff=Math.abs(arr[k]-arr[k-1]);
+                }else{
+                    list.add(false);
+                    break;
+                }
+            }
+            if(list.size()!=i+1){
+                list.add(true);
+            }
+        }
+        return list;
+    }
+}
