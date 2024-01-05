@@ -48,3 +48,5 @@ d is the common difference between terms.
           result = (value / (2^numPositions)) mod (2^(bitLength - numPositions))  --> The unsigned right shift is similar to dividing value by 2 raised to the power of numPositions, 
                                                                                           and then taking the remainder when divided by 2 raised to the power of the remaining bit positions.
                                                                                                bitLength is the total number of bits in the data type.
+
+14). Formula to calculate the minumun operation needed to empty the number (only use 3 and 2)  : 2x + 3y = n   -->   (n+2)/3   -->   (minimum operation)   
