@@ -50,3 +50,7 @@ d is the common difference between terms.
                                                                                                bitLength is the total number of bits in the data type.
 
 14). Formula to calculate the minumun operation needed to empty the number (only use 3 and 2)  : 2x + 3y = n   -->   (n+2)/3   -->   (minimum operation)   
+
+15).The Josephus problem is a theoretical problem related to a certain elimination game. 
+          In this problem, people are standing in a circle, and every "k"-th person is eliminated until only one person remains.
+               winner = ( winner + k) % i     --> Iterate from i=2 to i=n. This corresponds to the number of people in the circle.
